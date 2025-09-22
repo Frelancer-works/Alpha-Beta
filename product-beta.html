@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Продукт Бета — Лендинг</title>
-  <meta name="description" content="Продукт Бета — второй продукт компании. Статичная страница, 2 CTA на Яндекс-форму, 4 ключевых блока." />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" as="image" href="assets/beta-hero.jpg" />
-  <link rel="stylesheet" href="/css/ui-kit.css" />
-  <meta property="og:title" content="Продукт Бета — Лендинг" />
-  <meta property="og:description" content="Hero, О продукте, Характеристики, Преимущества. CTA на форму." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/beta-og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Продукт Бета: Hero, О продукте, Характеристики, Преимущества. Две CTA-кнопки на Яндекс-форму.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="/assets/beta-hero.jpg">
+  <link rel="stylesheet" href="/css/ui-kit.css">
 
-  <!-- Product JSON-LD -->
+  <meta property="og:title" content="Продукт Бета — Лендинг">
+  <meta property="og:description" content="Второй продукт компании. Коротко о ценности и выгодах, два действия по форме.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/beta-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Product (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -22,7 +23,7 @@
     "name":"Продукт Бета",
     "brand":{"@type":"Brand","name":"Ваша Компания"},
     "image":["https://example.com/assets/beta-hero.jpg"],
-    "description":"Короткое описание продукта Бета (заменить на реальный текст).",
+    "description":"Краткое описание продукта Бета.",
     "offers":{
       "@type":"Offer",
       "url":"https://forms.yandex.ru/u/YYYYYYYYYYYYYY/",
@@ -34,9 +35,11 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">К основному содержимому</a>
+
   <header class="header" role="banner">
     <div class="container header__bar">
-      <a href="" class="brand" aria-label="На главную">
+      <a href="/" class="brand" aria-label="На главную">
         <span class="brand__logo" aria-hidden="true"></span>
         <span class="brand__name">Ваша Компания</span>
       </a>
@@ -44,115 +47,118 @@
         <a href="/product-alpha.html">Альфа</a>
         <a href="/product-beta.html" aria-current="page">Бета</a>
       </nav>
-      <div class="header__contacts">
-        <a href="tel:+79990000000">+7 999 000-00-00</a>
+      <div class="header__contacts" aria-label="Контакты">
+        <a href="tel:+79990000000">+7&nbsp;999&nbsp;000-00-00</a>
         <a href="mailto:info@example.com">info@example.com</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="container hero__grid">
-      <div>
-        <div class="hero__eyebrow">Обновление</div>
-        <h1 class="hero__title">Продукт Бета — сильный второй номер</h1>
-        <p class="hero__text">Короткий питч: чем Бета отличается от Альфы, как дополняет портфель и какую задачу закрывает лучше всего.</p>
-        <div class="hero__actions" style="display:flex; gap:1rem; flex-wrap:wrap">
-          <a class="btn btn--primary" href="https://forms.yandex.ru/u/YYYYYYYYYYYYYY/" target="_blank" rel="noopener">
-            Запросить консультацию
-          </a>
-          <a class="btn btn--ghost" href="#benefits">Преимущества</a>
-        </div>
-      </div>
-      <figure class="hero__media" aria-label="Изображение продукта Бета">
-        <img src="assets/beta.png" alt="Продукт Бета — иллюстрация" loading="eager" />
-      </figure>
-    </div>
-  </section>
-
-  <!-- О ПРОДУКТЕ -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section__title">О продукте</h2>
-      <p class="section__lead">Перепишите на ваш контент из UI-кита/Фигмы. Удерживаем структуру и семантику.</p>
-      <div class="grid grid--2">
-        <div class="card">
-          <div class="feature">
-            <span class="icon" aria-hidden="true"></span>
-            <div>
-              <strong>Сценарий А</strong>
-              <div class="muted">Опишите пользу для сегмента X.</div>
-            </div>
-          </div>
-          <div class="feature">
-            <span class="icon" aria-hidden="true"></span>
-            <div>
-              <strong>Сценарий B</strong>
-              <div class="muted">Опишите пользу для сегмента Y.</div>
-            </div>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div>
+          <p class="hero__eyebrow">Обновление</p>
+          <h1 class="hero__title">Продукт Бета — сильный второй номер</h1>
+          <p class="hero__text">Короткий питч: чем Бета отличается от Альфы, какую задачу закрывает и для кого.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://forms.yandex.ru/u/YYYYYYYYYYYYYY/" target="_blank" rel="noopener" role="button">Запросить консультацию</a>
+            <a class="btn btn--ghost" href="#benefits" role="button">Преимущества</a>
           </div>
         </div>
-        <div class="card">
-          <div class="feature">
-            <span class="icon" aria-hidden="true"></span>
-            <div>
-              <strong>Лёгкая подача</strong>
-              <div class="muted">Короткие блоки, читабельные подзаголовки.</div>
+        <figure class="hero__media">
+          <img src="/assets/beta-hero.jpg" alt="Продукт Бета — иллюстрация" loading="eager">
+        </figure>
+      </div>
+    </section>
+
+    <!-- О ПРОДУКТЕ -->
+    <section class="section" id="about" aria-labelledby="beta-about-title">
+      <div class="container">
+        <h2 class="section__title" id="beta-about-title">О продукте</h2>
+        <p class="section__lead">Замените на текст из UI-кита/Фигмы. Структура и семантика сохранены.</p>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <div class="feature">
+              <span class="icon" aria-hidden="true"></span>
+              <div>
+                <strong>Сценарий A</strong>
+                <p class="muted">Польза для сегмента X.</p>
+              </div>
             </div>
-          </div>
-          <div class="feature">
-            <span class="icon" aria-hidden="true"></span>
-            <div>
-              <strong>Конверсия</strong>
-              <div class="muted">Две чёткие CTA + повтор внизу страницы.</div>
+            <div class="feature">
+              <span class="icon" aria-hidden="true"></span>
+              <div>
+                <strong>Сценарий B</strong>
+                <p class="muted">Польза для сегмента Y.</p>
+              </div>
             </div>
+          </article>
+
+          <article class="card">
+            <div class="feature">
+              <span class="icon" aria-hidden="true"></span>
+              <div>
+                <strong>Лёгкая подача</strong>
+                <p class="muted">Короткие блоки, читабельные подзаголовки.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <span class="icon" aria-hidden="true"></span>
+              <div>
+                <strong>Конверсия</strong>
+                <p class="muted">Две чёткие CTA + повтор в конце.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ХАРАКТЕРИСТИКИ -->
+    <section class="section" id="specs" aria-labelledby="beta-specs-title">
+      <div class="container">
+        <h2 class="section__title" id="beta-specs-title">Характеристики</h2>
+        <div class="card" role="table" aria-label="Характеристики продукта Бета">
+          <div class="kv" role="row"><div class="kv__k" role="rowheader">Параметр 1</div><div class="kv__v" role="cell">Значение</div></div>
+          <div class="kv" role="row"><div class="kv__k" role="rowheader">Параметр 2</div><div class="kv__v" role="cell">Значение</div></div>
+          <div class="kv" role="row"><div class="kv__k" role="rowheader">Параметр 3</div><div class="kv__v" role="cell">Значение</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА + CTA -->
+    <section class="section" id="benefits" aria-labelledby="beta-benefits-title">
+      <div class="container">
+        <h2 class="section__title" id="beta-benefits-title">Преимущества</h2>
+
+        <div class="grid benefits">
+          <article class="card"><h3 style="margin:0 0 1rem;font-size:var(--fs-600)">Гибкость</h3><p class="muted">Масштабирование и кастомизация.</p></article>
+          <article class="card"><h3 style="margin:0 0 1rem;font-size:var(--fs-600)">Производительность</h3><p class="muted">Высокая скорость и стабильность.</p></article>
+          <article class="card"><h3 style="margin:0 0 1rem;font-size:var(--fs-600)">Поддержка</h3><p class="muted">Оперативная помощь и обновления.</p></article>
+        </div>
+
+        <div class="cta" style="margin-top:3rem">
+          <h3 style="margin:0 0 .6rem">Нужна демонстрация «Беты»?</h3>
+          <p class="section__lead">Оставьте заявку — пришлём актуальные материалы.</p>
+          <div class="hero__actions" style="justify-content:center">
+            <a class="btn btn--primary" href="https://forms.yandex.ru/u/YYYYYYYYYYYYYY/" target="_blank" rel="noopener" role="button">Оставить заявку</a>
+            <a class="btn btn--ghost" href="#specs" role="button">Смотреть характеристики</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ХАРАКТЕРИСТИКИ -->
-  <section class="section" id="specs">
-    <div class="container">
-      <h2 class="section__title">Характеристики</h2>
-      <div class="card" role="table" aria-label="Характеристики продукта Бета">
-        <div class="kv" role="row"><div class="kv__k" role="rowheader">Параметр 1</div><div class="kv__v" role="cell">Значение</div></div>
-        <div class="kv" role="row"><div class="kv__k" role="rowheader">Параметр 2</div><div class="kv__v" role="cell">Значение</div></div>
-        <div class="kv" role="row"><div class="kv__k" role="rowheader">Параметр 3</div><div class="kv__v" role="cell">Значение</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ПРЕИМУЩЕСТВА -->
-  <section class="section" id="benefits">
-    <div class="container">
-      <h2 class="section__title">Преимущества</h2>
-      <div class="grid benefits">
-        <div class="card"><h3 style="margin-top:0;font-size:var(--fs-600)">Гибкость</h3><p class="muted">Масштабирование и кастомизация.</p></div>
-        <div class="card"><h3 style="margin-top:0;font-size:var(--fs-600)">Производительность</h3><p class="muted">Высокая скорость и стабильность.</p></div>
-        <div class="card"><h3 style="margin-top:0;font-size:var(--fs-600)">Поддержка</h3><p class="muted">Оперативная помощь и обновления.</p></div>
-      </div>
-
-      <div class="cta" style="margin-top:3rem">
-        <h3 style="margin-top:0">Нужна демонстрация «Беты»?</h3>
-        <p class="section__lead">Оставьте заявку — пришлём актуальные материалы.</p>
-        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
-          <a class="btn btn--primary" href="https://forms.yandex.ru/u/YYYYYYYYYYYYYY/" target="_blank" rel="noopener">Оставить заявку</a>
-          <a class="btn btn--ghost" href="#specs">Смотреть характеристики</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container footer__grid">
       <div>© <span id="y"></span> Ваша Компания</div>
-      <div class="socials">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="WhatsApp">WA</a>
-        <a href="#" aria-label="Telegram">TG</a>
+      <div class="socials" aria-label="Социальные сети">
+        <a href="#" aria-label="Instagram" title="Instagram">IG</a>
+        <a href="#" aria-label="WhatsApp" title="WhatsApp">WA</a>
+        <a href="#" aria-label="Telegram" title="Telegram">TG</a>
       </div>
     </div>
   </footer>
@@ -160,4 +166,3 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
