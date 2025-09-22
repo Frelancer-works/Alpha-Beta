@@ -3,26 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Продукт Бета — Лендинг</title>
   <meta name="description" content="Продукт Бета: Hero, О продукте, Характеристики, Преимущества. Две CTA-кнопки на Яндекс-форму.">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="/assets/beta-hero.jpg">
-  <link rel="stylesheet" href="/css/ui-kit.css">
 
+  <!-- относительные пути: работают в проектных страницах GitHub Pages -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/beta-hero.jpg">
+  <link rel="stylesheet" href="css/ui-kit.css">
+
+  <!-- OG/Twitter (можно оставить относительные; для идеала — поставить абсолютные URL репозитория) -->
   <meta property="og:title" content="Продукт Бета — Лендинг">
-  <meta property="og:description" content="Второй продукт компании. Коротко о ценности и выгодах, два действия по форме.">
+  <meta property="og:description" content="Второй продукт компании. Коротко о ценности и выгодах, две CTA на форму.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/beta-og.jpg">
+  <meta property="og:image" content="assets/beta-og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Product (JSON-LD) -->
+  <!-- Product (JSON-LD) — оставил без дублей -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Product",
     "name":"Продукт Бета",
     "brand":{"@type":"Brand","name":"Ваша Компания"},
-    "image":["https://example.com/assets/beta-hero.jpg"],
+    "image":["assets/beta-hero.jpg"],
     "description":"Краткое описание продукта Бета.",
     "offers":{
       "@type":"Offer",
@@ -39,14 +43,16 @@
 
   <header class="header" role="banner">
     <div class="container header__bar">
-      <a href="/" class="brand" aria-label="На главную">
+      <a href="./" class="brand" aria-label="На главную">
         <span class="brand__logo" aria-hidden="true"></span>
         <span class="brand__name">Ваша Компания</span>
       </a>
+
       <nav class="nav" role="navigation" aria-label="Основная навигация">
-        <a href="/product-alpha.html">Альфа</a>
-        <a href="/product-beta.html" aria-current="page">Бета</a>
+        <a href="product-alpha.html">Альфа</a>
+        <a href="product-beta.html" aria-current="page">Бета</a>
       </nav>
+
       <div class="header__contacts" aria-label="Контакты">
         <a href="tel:+79990000000">+7&nbsp;999&nbsp;000-00-00</a>
         <a href="mailto:info@example.com">info@example.com</a>
@@ -67,8 +73,9 @@
             <a class="btn btn--ghost" href="#benefits" role="button">Преимущества</a>
           </div>
         </div>
+
         <figure class="hero__media">
-          <img src="/assets/beta-hero.jpg" alt="Продукт Бета — иллюстрация" loading="eager">
+          <img src="assets/beta-hero.jpg" alt="Продукт Бета — иллюстрация" loading="eager">
         </figure>
       </div>
     </section>
