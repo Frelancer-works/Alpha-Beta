@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лендинги: Альфа и Бета</title>
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/ui-kit.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__bar">
+      <a href="./" class="brand" aria-label="На главную">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span class="brand__name">Ваша Компания</span>
+      </a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="product-alpha.html">Альфа</a>
+        <a href="product-beta.html">Бета</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container">
+    <h1 class="section__title">Выберите продукт</h1>
+    <div class="grid grid--2">
+      <a class="card" href="product-alpha.html"><strong>Продукт Альфа</strong><p class="muted">Hero, О продукте, Характеристики, Преимущества</p></a>
+      <a class="card" href="product-beta.html"><strong>Продукт Бета</strong><p class="muted">Hero, О продукте, Характеристики, Преимущества</p></a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>© <span id="y"></span> Ваша Компания</div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
