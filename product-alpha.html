@@ -3,30 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Продукт Альфа — Лендинг</title>
   <meta name="description" content="Продукт Альфа: 4 ключевых блока (Hero, О продукте, Характеристики, Преимущества) и 2 CTA на Яндекс-форму.">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="/assets/alpha-hero.jpg">
-  <link rel="stylesheet" href="/css/ui-kit.css">
+
+  <!-- относительные пути -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/alpha-hero.jpg">
+  <link rel="stylesheet" href="css/ui-kit.css">
 
   <meta property="og:title" content="Продукт Альфа — Лендинг">
   <meta property="og:description" content="Коротко о ценности, характеристики и преимущества. Оставьте заявку через форму.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/alpha-og.jpg">
+  <meta property="og:image" content="assets/alpha-og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Breadcrumbs (JSON-LD) -->
+  <!-- Breadcrumbs (JSON-LD) — при желании подставь свой абсолютный URL проекта -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Главная","item":"https://example.com/"},
-      {"@type":"ListItem","position":2,"name":"Продукты","item":"https://example.com/products"},
-      {"@type":"ListItem","position":3,"name":"Продукт Альфа","item":"https://example.com/product-alpha"}
+      {"@type":"ListItem","position":1,"name":"Главная","item":"https://username.github.io/repo-name/"},
+      {"@type":"ListItem","position":2,"name":"Продукты","item":"https://username.github.io/repo-name/products"},
+      {"@type":"ListItem","position":3,"name":"Продукт Альфа","item":"https://username.github.io/repo-name/product-alpha.html"}
     ]
   }
   </script>
+
   <!-- Product (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -34,7 +38,7 @@
     "@type":"Product",
     "name":"Продукт Альфа",
     "brand":{"@type":"Brand","name":"Ваша Компания"},
-    "image":["https://example.com/assets/alpha-hero.jpg"],
+    "image":["assets/alpha-hero.jpg"],
     "description":"Краткое описание продукта Альфа.",
     "offers":{
       "@type":"Offer",
@@ -51,13 +55,13 @@
 
   <header class="header" role="banner">
     <div class="container header__bar">
-      <a href="/" class="brand" aria-label="На главную">
+      <a href="./" class="brand" aria-label="На главную">
         <span class="brand__logo" aria-hidden="true"></span>
         <span class="brand__name">Ваша Компания</span>
       </a>
       <nav class="nav" role="navigation" aria-label="Основная навигация">
-        <a href="/product-alpha.html" aria-current="page">Альфа</a>
-        <a href="/product-beta.html">Бета</a>
+        <a href="product-alpha.html" aria-current="page">Альфа</a>
+        <a href="product-beta.html">Бета</a>
       </nav>
       <div class="header__contacts" aria-label="Контакты">
         <a href="tel:+79990000000">+7&nbsp;999&nbsp;000-00-00</a>
@@ -69,12 +73,12 @@
       <div class="container">
         <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
           <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+            <a itemprop="item" href="./"><span itemprop="name">Главная</span></a>
             <meta itemprop="position" content="1">
           </li>
           <li class="breadcrumbs__sep" aria-hidden="true">/</li>
           <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="/products"><span itemprop="name">Продукты</span></a>
+            <a itemprop="item" href="products"><span itemprop="name">Продукты</span></a>
             <meta itemprop="position" content="2">
           </li>
           <li class="breadcrumbs__sep" aria-hidden="true">/</li>
@@ -101,7 +105,7 @@
           </div>
         </div>
         <figure class="hero__media">
-          <img src="/assets/alpha-hero.jpg" alt="Продукт Альфа — иллюстрация" loading="eager">
+          <img src="assets/alpha-hero.jpg" alt="Продукт Альфа — иллюстрация" loading="eager">
         </figure>
       </div>
     </section>
@@ -210,3 +214,4 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
